@@ -1,11 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import NavBar from './Components/NavBar/NavBar'
+import  Latest  from './Components/Latest/Latest'
+import  Search  from './Components/Search/Search'
+
 function App() {
   return (
     <Router>
-    <div>
-      <p>Hello World</p>
-    </div>
+      <NavBar className='navBar' />
+        <Switch>
+               <Route path='/search' component={Search} />
+               <Route path='/' component={Latest} />
+        </Switch>
     </Router>
   );
 }
