@@ -1,3 +1,10 @@
 .nav-menu {
-    display: inline;
+    display: grid;
+    grid-template-columns: repeat(2, auto); 
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 80vw;
+    justify-content: left;
+    margin-right: 2rem;
 }
