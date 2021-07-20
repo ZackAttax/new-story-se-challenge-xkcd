@@ -58,8 +58,7 @@ class Search extends Component {
             />
             <button type="submit" className='searchSubmit'>Search</button>
         </form>
-            <h3>{this.state.title}</h3>
-        <img src={this.state.img} className='searchImage' alt={this.state.alt} />
+        <img src={this.state.img} className='searchImage' alt={this.state.alt} title={this.state.title}/>
         </div>
         );
     }
