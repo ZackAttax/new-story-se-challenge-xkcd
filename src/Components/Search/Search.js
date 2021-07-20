@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class Search extends Component {
     state = {
         num: "",
-        img: ""
+        img: "",
+        alt: ""
     }
     findComic= (number) => {
         fetch(`https://xkcd.vercel.app/?comic=${number}`)
@@ -40,7 +41,7 @@ class Search extends Component {
             />
             <button type="submit">Search</button>
         </form>
-        { this.state.img && <img src={this.state.img} className='latestImage'/> }
+        { this.state.img && <img src={this.state.img} className='latestImage' alt={this.state.alt} /> }
         </div>
         );
     }

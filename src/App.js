@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NavBar from './Components/NavBar/NavBar'
-import  Latest  from './Components/Latest/Latest'
-import  Search  from './Components/Search/Search'
+import NavBar from './Components/NavBar/NavBar';
+import  Latest  from './Components/Latest/Latest';
+import  Search  from './Components/Search/Search';
 
 function App() {
   return (

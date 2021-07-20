@@ -1,6 +1,7 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { MenuItems } from './MenuItems'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { MenuItems } from './MenuItems';
+import './NavBar.css';
 
 const NavBar = () => {
     return (
@@ -9,9 +10,9 @@ const NavBar = () => {
                     {MenuItems.map((item, index) => {
                         return (
                            <li key={index}>
-                               <NavLink to={item.url}  className={item.cName}>
+                               <Link to={item.url}  className={item.cName}>
                                    {item.title} 
-                                </NavLink>
+                                </Link>
                                </li>
                         )
                     })}

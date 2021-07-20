@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 
 class Latest extends Component {
     state = {
-        img: null
+        img: null,
+        alt: ""
     }
     componentDidMount() {
         fetch("https://xkcd.vercel.app/?comic=latest")
             .then(res => res.json())
             .then((result) => {
                 this.setState({
-                img: result.img
+                img: result.img,
+                alt: result.alt
                 })
             })
     }
@@ -17,7 +19,7 @@ class Latest extends Component {
     render() {
         return (
                 <div>
-                    <img className='latestImage' src={this.state.img} />
+                    <img className='latestImage' src={this.state.img} alt={this.state.alt} />
                 </div>
         );
     }
