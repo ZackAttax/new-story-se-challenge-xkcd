@@ -4,14 +4,17 @@ class Search extends Component {
     state = {
         num: "",
         img: "",
-        alt: ""
+        alt: "",
+        title: ""
     }
     findComic= (number) => {
         fetch(`https://xkcd.vercel.app/?comic=${number}`)
         .then(res => res.json())
         .then((result) => {
             this.setState({
-            img: result.img
+            img: result.img,
+            alt: result.alt,
+            title: result.title
             })
         })
     }
@@ -20,8 +23,7 @@ class Search extends Component {
             [event.target.name]: event.target.value
         });
     }
-    handleSubmit = (event, num) => {
-        console.log(num)
+    handleSubmit = (event) => {
         event.preventDefault()
         this.findComic(this.state.num)
     }
@@ -31,7 +33,7 @@ class Search extends Component {
             <div>
             <form onSubmit={this.handleSubmit}>
             <label>
-                Search Bar
+                Search Bar for Comic by Number
             </label>
             <input
                 type="number"
@@ -41,7 +43,8 @@ class Search extends Component {
             />
             <button type="submit">Search</button>
         </form>
-        { this.state.img && <img src={this.state.img} className='latestImage' alt={this.state.alt} /> }
+            <h3>{this.state.title}</h3>
+        <img src={this.state.img} className='latestImage' alt={this.state.alt} />
         </div>
         );
     }
