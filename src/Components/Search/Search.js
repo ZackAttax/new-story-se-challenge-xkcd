@@ -49,16 +49,17 @@ class Search extends Component {
                 Search Bar for Comic by Number
             </label>
             <input
+                className='searchInput'
                 type="number"
                 id="search-bar"
                 name='num' 
                 min="1" max={this.state.max}
                 value={this.state.num} onChange={this.handleFormChange}
             />
-            <button type="submit">Search</button>
+            <button type="submit" className='searchSubmit'>Search</button>
         </form>
             <h3>{this.state.title}</h3>
-        <img src={this.state.img} className='latestImage' alt={this.state.alt} />
+        <img src={this.state.img} className='searchImage' alt={this.state.alt} />
         </div>
         );
     }
