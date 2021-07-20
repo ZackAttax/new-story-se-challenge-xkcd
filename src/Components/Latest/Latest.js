@@ -12,8 +12,8 @@ class Latest extends Component {
             .then((result) => {
                 this.setState({
                 img: result.img,
-                alt: result.alt,
-                title: result.title
+                title: result.alt,
+                alt: result.title
                 })
             })
             .catch(error => {
