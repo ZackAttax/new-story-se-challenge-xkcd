@@ -5,7 +5,20 @@ class Search extends Component {
         num: "",
         img: "",
         alt: "",
-        title: ""
+        title: "",
+        max: "2219"
+    }
+    componentDidMount() {
+        fetch("https://xkcd.vercel.app/?comic=latest")
+            .then(res => res.json())
+            .then((result) => {
+                this.setState({
+                max: result.num
+                })
+            })
+            .catch(error => {
+                throw(error);
+            })
     }
     findComic= (number) => {
         fetch(`https://xkcd.vercel.app/?comic=${number}`)
@@ -38,7 +51,8 @@ class Search extends Component {
             <input
                 type="number"
                 id="search-bar"
-                name='num'
+                name='num' 
+                min="1" max={this.state.max}
                 value={this.state.num} onChange={this.handleFormChange}
             />
             <button type="submit">Search</button>

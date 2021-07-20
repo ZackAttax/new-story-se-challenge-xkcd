@@ -16,6 +16,9 @@ class Latest extends Component {
                 title: result.title
                 })
             })
+            .catch(error => {
+                throw(error);
+            })
     }
 
     render() {
