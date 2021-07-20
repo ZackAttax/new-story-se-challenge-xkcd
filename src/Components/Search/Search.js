@@ -40,7 +40,7 @@ class Search extends Component {
             />
             <button type="submit">Search</button>
         </form>
-        { this.state.img && <img src={this.state.img} /> }
+        { this.state.img && <img src={this.state.img} className='latestImage'/> }
         </div>
         );
     }

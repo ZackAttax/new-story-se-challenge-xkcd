@@ -17,7 +17,7 @@ class Latest extends Component {
     render() {
         return (
                 <div>
-                    <img src={this.state.img} />
+                    <img className='latestImage' src={this.state.img} />
                 </div>
         );
     }
