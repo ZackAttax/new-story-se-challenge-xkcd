@@ -8,12 +8,3 @@
     justify-content: left;
     margin-right:git  2rem;
 }
-.nav-links:hover {
-    background-color: rgb(0, 68, 57);
-    border-radius: 4px;
-    transition: all 0.2s ease-out;
-}
-.nav-links {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-}
